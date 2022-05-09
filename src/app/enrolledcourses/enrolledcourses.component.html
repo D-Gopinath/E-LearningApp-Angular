@@ -1,0 +1,11 @@
+<h3>Enrolled Courses</h3>
+<div class="row">
+    <ng-container *ngFor="let item of courseData">
+        <div class="column">
+           <iframe src='{{item.url}} | safe' height="300" width="300"></iframe>
+            <p>Course: {{item.cname}}</p>
+            <p>Tutor: {{item.tutor}}</p>
+            <p>Duration: {{item.duration}}</p>
+        </div> 
+    </ng-container>              
+</div>

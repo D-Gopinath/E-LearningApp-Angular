@@ -1,0 +1,27 @@
+<h1 style="font-family: 'Times New Roman', Times, serif;">Welcome To E-Learning App !!!</h1>
+    <div class="row">
+        <div class="column left">
+          <h3>New User?</h3>
+          <p>Create Account to explore the variety of courses and unlock your true potentials...</p>
+          <p>Click here to Register</p>
+          <a routerLink="/register" id="link">Register</a>
+        </div>
+        <div class="column middle">
+          <h3>Registered User?</h3>
+          <p>Already Exisiting User? Login here to continue from where you left...</p>
+          <p>Click here to Login</p>
+          <a routerLink="/login" id="link">Login</a>
+        </div>
+        <div class="column right">
+            <img src="assets/homepageimg1.jpg" alt="Learn To Become Professional" height="440px" width="100%">
+        </div>
+      </div>
+<h2>Available Courses</h2>
+<div class="row">
+    <ng-container  *ngFor="let item of courses">
+        <div class="column_i">
+            <img src="{{item.imageurl}}" alt="course" width="50%" height="100px">
+            <p>Name:{{item.cname}}</p><button routerLink="/viewcourse/{{item.id}}">View Course</button>
+        </div>
+    </ng-container>   
+</div>

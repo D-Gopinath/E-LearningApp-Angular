@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.login{
+            color: black;
+            height: 515px;
+            width: 50%;
+            padding-top: 80px;
+            border-radius: 5px;
+            background-color: rgb(235, 229, 229);
+            margin: auto;
+            font-family: cursive;
+    }
+input,button{
+            width: 50%;
+    }

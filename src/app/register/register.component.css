@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+.column{ 
+        text-align: center;
+        padding-top: 34px;
+        font-family:cursive;
+    }
+h1{
+   color:black;        
+   }
+.registration{
+          color: black;
+          padding: 40px 50px 80px 50px;
+        }

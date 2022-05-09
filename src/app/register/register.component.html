@@ -1,0 +1,29 @@
+<div class="column">
+    <h1>Register Here</h1>
+    <form ngNativeValidate (submit)="register()" class="registration" autocomplete="off" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Enter Your Name" required autofocus/>
+        </div>
+        <div>
+            <br>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" [(ngModel)]="phone" placeholder="Enter Phone Number" required/>
+            
+        </div>
+        <div>
+            <br>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" [(ngModel)]="email" placeholder="Enter your Email Id" required/>
+        </div>
+        <div>
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" name="passs" id="pass" [(ngModel)]="password" placeholder="Enter 8-16 characters" required/>
+        </div>
+        <div>
+            <br>
+            <button type="submit">Register</button>
+        </div>
+    </form>  
+</div>

@@ -1,0 +1,13 @@
+<div class="row">
+    <ng-container  *ngFor="let item of courses">
+        <div class="column">
+            <div id="divItem">
+            <img src="{{item.imageurl}}" alt="course" width="50%" height="100px">
+            <p>Name:{{item.cname}}</p>
+            <p>Tutor:{{item.tutor}}</p>
+            <p>Duration:{{item.duration}}</p>
+            <button routerLink="/viewcourse/{{item.id}}">View Course</button>
+        </div>
+        </div>
+    </ng-container>   
+</div>
