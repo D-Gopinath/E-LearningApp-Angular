@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -34,12 +35,12 @@ export class LoginComponent implements OnInit {
       const url="http://localhost:9000/users/login";
       this.http.post(url,user).subscribe(res=>{
         let user=res;
-        alert("Successfully LogedIn");
+        this.toastr.success("Successfully LogedIn");
         localStorage.setItem('userData',JSON.stringify(user));
         window.location.href='/listcourse';
       },err=>{
-        console.log(err.error.message);
-          alert(err.error.message);
+          console.log(err.error.message);
+          this.toastr.error(err.error.message);
           window.location.href="/homepage";
       })
     }

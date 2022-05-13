@@ -27,9 +27,6 @@
     color: antiquewhite;
     padding: 10px 25px;
 }
-.column_i{
-    float: left;
-    width: 33%;
-    padding: 10px;
-    padding-left:50px;
+.col-4{
+    padding: 20px;
 }

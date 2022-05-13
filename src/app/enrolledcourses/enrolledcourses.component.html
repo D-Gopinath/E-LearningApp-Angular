@@ -1,11 +1,37 @@
 <h3>Enrolled Courses</h3>
 <div class="row">
     <ng-container *ngFor="let item of courseData">
-        <div class="column">
-           <iframe src='{{item.url}} | safe' height="300" width="300"></iframe>
+        <div class="float-container">
+            <div class="float-child">
+                <iframe class="card-img-bottom" [src]='item.url | safe' alt="video" width="400px" height="400px"></iframe>
+            </div>
+            <div class="float-child">
+                <h3 style="color:blue"><strong>{{item.cname}}</strong></h3>
+                <p style="color:darkblue"><i>By {{item.tutor}}</i></p>
+                <p style="color:darkgreen"><b>{{item.duration}}</b></p>
+                <br>
+                <p style="color:darkslategrey">{{item.description}}</p>
+            </div>
+          </div>   
+          <hr>       
+    </ng-container>              
+</div>
+
+
+  <!--
+      <div class="column">
+          <iframe [src]='item.url | safe' height="300" width="300"></iframe>
             <p>Course: {{item.cname}}</p>
             <p>Tutor: {{item.tutor}}</p>
             <p>Duration: {{item.duration}}</p>
         </div> 
-    </ng-container>              
-</div>
+
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Course: {{item.cname}}</h5>
+              <p class="card-text">By: {{item.tutor}}</p>
+              <p class="card-text"><small class="text-muted">Duration - {{item.duration}}</small></p>
+            </div>
+            <iframe class="card-img-bottom" [src]='item.url | safe' alt="video" width="854px" height="480px"></iframe>
+        </div>
+  -->

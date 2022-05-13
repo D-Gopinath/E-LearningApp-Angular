@@ -1,10 +1,19 @@
 
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{courseData.imageurl}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{courseData.cname}}</h5>
-      <p class="card-text">by {{courseData.tutor}}</p>
-      <p class="card-text">{{courseData.duration}}</p>
-      <button href="#" class="btn btn-primary" (click)="enrollCourse()">Enroll</button>
+<div class="float-container">
+  <div class="left">
+    <h2 style="color:blue"><strong>{{courseData.cname}}</strong></h2>
+    <p style="color:darkblue"><i>By {{courseData.tutor}}</i></p>
+    <p style="color:darkgreen"><b>{{courseData.duration}}</b></p>
+    <br>
+    <p>{{courseData.description}}</p>
+  </div>
+  <div class="right">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{courseData.imageurl}}" alt="image" width="287px" height="180px">
+      <div class="card-body">
+        <i>click here to Enroll</i><br>
+        <button class="btn btn-primary" (click)="enrollCourse()" [disabled]="!isLoggedIn()">Enroll</button>
+      </div>
     </div>
   </div>
+</div>   

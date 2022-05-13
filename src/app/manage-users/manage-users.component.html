@@ -1,0 +1,22 @@
+<h1>USER LIST </h1>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PHONE</th>
+            <th>EMAIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.email}}</td>
+            <td><button type="reject" class="btn-danger">Remove</button> &nbsp;
+            </tr>
+    </tbody>
+</table>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.removeItem("userData");
-    alert("Logout Successful");
+    this.toastr.success("Logout Successful");
     window.location.href="/homepage";
   }
 

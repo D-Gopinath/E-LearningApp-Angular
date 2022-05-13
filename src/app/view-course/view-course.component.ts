@@ -35,6 +35,10 @@ export class ViewCourseComponent implements OnInit {
     let user = localStorage.getItem("userData");
     return user != null ? JSON.parse(user): null;
   }
+  isLoggedIn(){
+    let user = localStorage.getItem("userData");
+    return user != null ? true: false;
+  }
 
   enrollCourse(){
 

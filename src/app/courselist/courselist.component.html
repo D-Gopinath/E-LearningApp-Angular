@@ -1,13 +1,20 @@
+<form ngNativeValidate (submit)="search()">
+    Search Course <input type="text" name="course" [(ngModel)]="course"><button type="submit">Search</button> 
+</form>
+<h3>Available Courses</h3>
 <div class="row">
     <ng-container  *ngFor="let item of courses">
         <div class="column">
-            <div id="divItem">
-            <img src="{{item.imageurl}}" alt="course" width="50%" height="100px">
-            <p>Name:{{item.cname}}</p>
-            <p>Tutor:{{item.tutor}}</p>
-            <p>Duration:{{item.duration}}</p>
-            <button routerLink="/viewcourse/{{item.id}}">View Course</button>
-        </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{item.imageurl}}" alt="Card image cap" width="287px" height="180px">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.cname}}</h5>
+                  <p class="card-text">by {{item.tutor}}</p>
+                  <p class="card-text">{{item.duration}}</p>
+                  <button routerLink="/viewcourse/{{item.id}}" class="btn btn-primary">View Details</button>
+                </div>
+            </div> 
         </div>
     </ng-container>   
 </div>
+

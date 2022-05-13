@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,7 +12,7 @@ export class EnrolledcoursesComponent implements OnInit {
 
   id!:number;
   courseData:any;
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient,public domSanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['uid'];

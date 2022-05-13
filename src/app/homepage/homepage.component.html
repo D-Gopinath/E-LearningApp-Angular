@@ -1,3 +1,4 @@
+<ngx-spinner  class="ball-scale-multiple"></ngx-spinner>
 <h1 style="font-family: 'Times New Roman', Times, serif;">Welcome To E-Learning App !!!</h1>
     <div class="row">
         <div class="column left">
@@ -16,12 +17,17 @@
             <img src="assets/homepageimg1.jpg" alt="Learn To Become Professional" height="440px" width="100%">
         </div>
       </div>
-<h2>Available Courses</h2>
+<h2>Course category</h2>
 <div class="row">
     <ng-container  *ngFor="let item of courses">
-        <div class="column_i">
-            <img src="{{item.imageurl}}" alt="course" width="50%" height="100px">
-            <p>Name:{{item.cname}}</p><button routerLink="/viewcourse/{{item.id}}">View Course</button>
+    <div class="col-4" >
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{item.image}}" alt="Card image cap" width="287px" height="180px">
+        <div class="card-body">
+          <h5 class="card-title">{{item.category}}</h5>
+          <button routerLink="/coursesbytype/{{item.id}}" class="btn btn-primary">View Courses</button>
         </div>
+      </div>
+    </div>
     </ng-container>   
 </div>

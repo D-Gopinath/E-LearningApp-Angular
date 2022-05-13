@@ -14,6 +14,14 @@ import { CourselistComponent } from './courselist/courselist.component';
 import { EnrolledcoursesComponent } from './enrolledcourses/enrolledcourses.component';
 import { FooterComponent } from './footer/footer.component';
 import { SafePipe } from './safe.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ViewCourseByTypeComponent } from './view-course-by-type/view-course-by-type.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ManagecourseComponent } from './managecourse/managecourse.component';
+import { ManageUsersComponent } from './manage-users/manage-users.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,14 +34,20 @@ import { SafePipe } from './safe.pipe';
     CourselistComponent,
     EnrolledcoursesComponent,
     FooterComponent,
-    SafePipe
+    SafePipe,
+    ViewCourseByTypeComponent,
+    ManagecourseComponent,
+    ManageUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

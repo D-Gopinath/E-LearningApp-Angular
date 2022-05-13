@@ -1,14 +1,12 @@
 @charset "ISO-8859-1";
- * {
-    box-sizing: border-box;
-        }
-.column {
-    width: 100%;
-    padding: 10px;
-    padding-left: 50px;
+
+.float-container {
+    /* border: 3px solid rgb(172, 132, 224); */
+    padding: 20px;
 }
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+} 
